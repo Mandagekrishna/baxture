@@ -8,16 +8,13 @@ function FetchData(props) {
                 .then(Response=>Response.json())
                 //.then(result=>props.func(result))}
                 .then(result=>{
-                                result.forEach(data => {data.isfollow="0"})
-                                //props.func(result)
-                                console.log('here is output');
-                                console.log(result)
+                                result.forEach(data => {data.isfollow="0", data.isdisplay="1"})
+                                                        
                                 props.func(result)
+                               // console.log(result)
 
                                 
-                })}       
-                
-                
+                })} 
                 ,[])
 
              //   console.log(apiData)
